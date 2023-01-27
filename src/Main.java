@@ -9,8 +9,9 @@ public class Main {
         int workingDay = 0;
         int absDays = 0;
         int month = 0;
+        int workingHours=0;
 
-        while(workingDay <=20 && month <30 ) {
+        while(workingDay <=20 && month <30 && workingHours <= 96 ) {
 
             int attendance = (int) ((Math.random() * 10) % 2);
 
@@ -18,6 +19,7 @@ public class Main {
                 case 0:
                     workingDay++;
                     month++;
+                    workingHours += 8;
                     break;
                 default:
                     month++;
@@ -36,8 +38,10 @@ public class Main {
         int partWorkingDay = 0;
         int partMonth = 0;
         int partAbsDays = 0;
+        int partWorkingHours = 0;
 
-        while(partWorkingDay <= 20 && partMonth<30) {
+
+        while(partWorkingDay <= 20 && partMonth<30 && partWorkingHours <= 96) {
 
             int partAttendance = (int) ((Math.random() * 10) % 2);
 
@@ -45,6 +49,7 @@ public class Main {
                 case 0:
                     partMonth++;
                     partWorkingDay++;
+                    partWorkingHours += 8;
                     break;
                 default:
                     partMonth++;
